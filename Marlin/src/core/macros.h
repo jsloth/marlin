@@ -185,7 +185,7 @@
 #define _ENA_1(O)           _ISENA(CAT(_IS,CAT(ENA_, O)))
 #define _DIS_1(O)           NOT(_ENA_1(O))
 #define ENABLED(V...)       DO(ENA,&&,V)
-#define DISABLED(V...)      DO(DIS,&&,V)
+#define   DISABLED(V...)      DO(DIS,&&,V)
 
 #define TERN(O,A,B)         _TERN(_ENA_1(O),B,A)    // OPTION converted to '0' or '1'
 #define TERN0(O,A)          _TERN(_ENA_1(O),0,A)    // OPTION converted to A or '0'
